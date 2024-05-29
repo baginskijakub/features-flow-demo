@@ -5,15 +5,18 @@ import { FeaturesFlowProvider, FeaturesFlowConfig } from '@featuresflow/sdk-reac
 
 const ffConfig: BaseFeaturesFlowConfig = {
     authenticationKey: 'YOUR_AUTHENTICATION_KEY',
-    identifier: 'YOUR_USER_ID_10',
+    identifier: 'YOUR_USER_ID',
     trafficType: 'session',
 }
 
-export default function Page({ treatments } : { treatments: Record<string, string> }) {
+export default function ServerSideToClientSide({ treatments } : { treatments: Record<string, string> }) {
 
     const ffConfigExtended: FeaturesFlowConfig= {
         authenticationKey: 'YOUR_AUTHENTICATION_KEY',
         identifier: 'YOUR_USER_ID',
+        options: {
+            prefetchedFeatures: treatments
+        }
     }
 
     return (

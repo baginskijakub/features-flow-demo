@@ -2,7 +2,7 @@ import {VariantA} from "@/components/VariantA";
 import {VariantB} from "@/components/VariantB";
 import { FeaturesFlowClient, FeaturesFlowConfig } from '@featuresflow/sdk-js';
 
-export default async function ServerSide({ treatment } : { treatment: string}) {
+export default function ServerSide({ treatment } : { treatment: string}) {
 
     return (
         <main className='flex h-screen w-screen justify-center items-center'>
