@@ -5,10 +5,10 @@ import {ClientSide} from "@/app/server-side-to-client-side/ClientSide";
 const ffConfig: FeaturesFlowConfig = {
     authenticationKey: 'YOUR_AUTHENTICATION_KEY',
     trafficType: 'session',
-    identifier: 'YOUR_USER_ID_10',
+    identifier: 'YOUR_USER_ID',
 }
 
-export async function Page() {
+export default async function ServerSideToClientSide() {
     const res = await getFeatures(ffConfig)
 
     const treatments = res.status === 'success' ? res.features : {}
@@ -17,5 +17,3 @@ export async function Page() {
         <ClientSide treatments={treatments}/>
     )
 }
-
-export default Page

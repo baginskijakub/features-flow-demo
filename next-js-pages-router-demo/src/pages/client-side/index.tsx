@@ -1,6 +1,5 @@
-'use client'
-import { FeaturesFlowProvider } from '@featuresflow/sdk-react';
 import {MyComponent} from "@/components/my-component";
+import { FeaturesFlowProvider } from "@featuresflow/sdk-react";
 
 const ffConfig= {
     authenticationKey: 'YOUR_AUTHENTICATION_KEY',
