@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import {VariantA} from "@/components/VariantA";
 import {VariantB} from "@/components/VariantB";
